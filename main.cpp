@@ -36,7 +36,7 @@ int main (int argc, char** argv)
 	remote_address.sin_family	= AF_INET;
 	inet_pton(AF_INET, argv[1], &remote_address.sin_addr);
 	
-	packets = new Pakiet[maxhops]();
+	packets = new Pakiet[maxhops + 1]();
 	for(int i = 0 ; i < maxhops; ++i)
 	{
 		packets[i] = Pakiet(i);
